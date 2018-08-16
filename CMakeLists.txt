@@ -231,6 +231,13 @@ configure_file (
 )
 
 
+# Generate doxygen configuration file
+configure_file (
+	"${PROJECT_SOURCE_DIR}/templates/doxygen.conf.in"
+	"${PROJECT_BINARY_DIR}/doxygen.conf"
+)
+
+
 # ===========================================
 # Build Test Suite with CuTest (unit testing)
 # ===========================================

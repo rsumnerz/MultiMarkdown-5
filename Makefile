@@ -76,6 +76,12 @@ documentation: $(BUILD_DIR) $(GREG)
 	cmake -DDOCUMENTATION=1 ..; cd ..; \
 	doxygen build/doxygen.conf
 
+# Build the documentation using doxygen
+documentation: $(BUILD_DIR)
+	cd $(BUILD_DIR); \
+	cmake -DDOCUMENTATION=1 ..; cd ..; \
+	doxygen build/doxygen.conf
+
 # Clean out the build directory
 .PHONY : clean
 clean:
